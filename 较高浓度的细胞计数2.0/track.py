@@ -61,7 +61,7 @@ class Track():
                     num = candi[n]
                     change = abs(candi[n+1])
             self.velocity.append(next.info[num+1]-self.locate[1])
-            self.locate = next.info[n:n+4]
+            self.locate = next.info[num:num+4]
             print("track: ", self.locate, self.velocity, self.active)
             return True
 
