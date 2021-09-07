@@ -49,6 +49,8 @@ class Frame():
 
     def iou(self, x1, x2):
         """计算两个细胞横坐标的交并比"""
+        if (x1>self.last[0][0] + self.last[0][2] // 2) or (x2<self.last[0][0] - self.last[0][2] // 2):
+            return 0
         x_items = []
         x_items.append(self.last[0][0] - self.last[0][2] // 2)
         x_items.append(self.last[0][0] + self.last[0][2] // 2)
